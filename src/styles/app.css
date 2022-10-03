@@ -1,0 +1,19 @@
+@font-face {
+    font-family: viola;
+    src: url(../fonts/VIOLA.ttf);
+}
+
+@font-face {
+    font-family: future;
+    src: url(../fonts/FuturaTS-Regular.ttf);
+}
+
+body{
+    margin: 0;
+}
+
+#app{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}

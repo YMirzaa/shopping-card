@@ -1,7 +1,8 @@
+import '../styles/women.css';
 
 function Women() {
     return (
-      <div>
+      <div id="women">
 
       </div>
     );

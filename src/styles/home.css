@@ -1,0 +1,40 @@
+#home{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+}
+
+#home button{
+    background-color: black;
+    color: white;
+    text-align: center;
+    border: none;
+
+
+    width: 220px;
+    padding: 8px 0;
+    font-size: 1.3rem;
+    transition: all 0.5s ease-out;
+
+
+}
+#home button:hover{
+    background-color: #fff;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+}
+
+
+
+video {
+
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+  
+    position: absolute;
+    z-index: -1;
+}

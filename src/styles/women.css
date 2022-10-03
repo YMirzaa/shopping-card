@@ -1,0 +1,7 @@
+#women{
+    flex: 1;
+    background-image: url('../assets/img/hero2.jpg');
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position: center;
+}
