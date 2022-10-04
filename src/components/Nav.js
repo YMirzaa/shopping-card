@@ -1,17 +1,22 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import '../styles/nav.css';
+import gitIcon from '../assets/icons/github.png';
 
 const Nav = () => {
+    function openGitHub(){
+        window.open('https://github.com/YMirzaa', "_blank");
+    };
 
-  
     return (
       <nav>
-        <div className="nav-left">
-            Icon
-            Yusuf Mirza Oksuz
-            Ankara
-        </div>
+        <div onClick={openGitHub} className="nav-left">
+            
+            <img  src={gitIcon} alt="gitHub icon"/>
+            
+            <div>Yusuf Mirza Oksuz</div>
+            <div> Istanbul</div>
+            </div>
      
         <div className="nav-center">
             <div className="nav-brand">
