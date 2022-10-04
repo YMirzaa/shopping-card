@@ -20,21 +20,30 @@ const Nav = () => {
             <div className="nav-pages">
                 <ul>
                     <Link to='/'>
-                        <li>Home</li>
+                        <li>
+                            <span className="nav-links">Home</span>
+                        </li>
                     </Link>
             
                     <Link to='/women'>
-                        <li>Women</li>
+                        <li>
+                            <span className="nav-links">Women</span>
+                        </li>
                     </Link>
             
                     <Link to='/men'>
-                        <li>Men</li>
+                        <li>
+                            <span className="nav-links">Men</span>
+                        </li>
                     </Link>
 
                     <Link to='/about'>
-                        <li>About</li>
+                        <li>
+                            <span className="nav-links">About</span>
+                        </li>
                     </Link>  
                 </ul>
+                <div className="dot"></div>
             </div>
         </div>
         <div className="nav-right">
