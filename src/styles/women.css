@@ -1,7 +1,31 @@
 #women{
     flex: 1;
+    background-color: black;
+}
+
+#women::before{
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+
     background-image: url('../assets/img/hero2.jpg');
     background-repeat:no-repeat;
     background-size: cover;
     background-position: center;
+    animation: 1s change-opacity-women 1 forwards normal ;
+
+}
+
+
+@keyframes change-opacity-women{
+    from{
+        opacity: 0;
+        
+    }
+    to  {
+        opacity: 1;
+    }
 }

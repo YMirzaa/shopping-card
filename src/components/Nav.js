@@ -1,7 +1,10 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import '../styles/nav.css';
+
 import gitIcon from '../assets/icons/github.png';
+import cartIcon from '../assets/icons/cart.png';
+import searchIcon from '../assets/icons/magnify.png';
 
 const Nav = () => {
     function openGitHub(){
@@ -52,8 +55,9 @@ const Nav = () => {
             </div>
         </div>
         <div className="nav-right">
-            shopcardLogo
-            searchlogo
+            <img  src={cartIcon} alt="cart icon"/>
+            <img  src={searchIcon} alt="search icon"/>
+        
         </div>
         
         

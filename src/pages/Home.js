@@ -7,7 +7,7 @@ function Home() {
 
   useEffect(() => {
     document.getElementsByClassName('nav-links')[0].classList.add('dot-active');
-
+    
     return ()=>{
       document.getElementsByClassName('nav-links')[0].classList.remove('dot-active');
     }

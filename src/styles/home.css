@@ -5,6 +5,18 @@
     align-items: center;
     gap: 20px;
 
+    animation: 1s change-opacity-home 1 forwards normal;
+
+}
+
+@keyframes change-opacity-home{
+    from{
+        background-color: rgba(0,0,0,1);
+        
+    }
+    to{
+        background-color: rgba(0,0,0,0);
+    }
 }
 
 #home button{

@@ -9,6 +9,7 @@ function Women() {
     return ()=>{
       document.getElementsByClassName('nav-links')[1].classList.remove('dot-active');
     }
+    
   },[]);
 
     return (
