@@ -21,7 +21,7 @@ nav{
 }
 
 
-nav:hover{
+nav:hover {
     background-color: black;
 
 }
@@ -84,17 +84,6 @@ nav:hover{
     position: relative; 
 }
 
-.dot-active.nav-links::after{
-    content: '';
-    height: 4px;
-    width: 4px;
-    border-radius: 50%;
-    background-color: white;
-    position: absolute;
-    top: 120%;
-    left: 50%;
-}
-
 .nav-pages a{
     color: white;
     text-decoration: none;
@@ -116,7 +105,16 @@ nav:hover{
     cursor: pointer;
 }
 
-
+#nav-links-dot{
+    content: '';
+    height: 4px;
+    width: 4px;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    top: 120%;
+    left: 50%;
+}
 
 @media (max-width: 600px) {
     nav{

@@ -3,14 +3,12 @@ import { useEffect } from 'react';
 import { Link } from "react-router-dom";
 import homeVideo from '../assets/videos/z.mp4';
 
-function Home() {
+function Home({ setDotActive}) {
 
   useEffect(() => {
-    document.getElementsByClassName('nav-links')[0].classList.add('dot-active');
+    setDotActive(0);
     
-    return ()=>{
-      document.getElementsByClassName('nav-links')[0].classList.remove('dot-active');
-    }
+
   },[]);
 
     return (

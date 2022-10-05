@@ -1,15 +1,21 @@
-import React, { useEffect } from "react";
+import React, {useState} from "react";
 import { Link } from "react-router-dom";
 import '../styles/nav.css';
+
+import ShopCart from "./ShopCart";
 
 import gitIcon from '../assets/icons/github.png';
 import cartIcon from '../assets/icons/cart.png';
 import searchIcon from '../assets/icons/magnify.png';
 
-const Nav = () => {
+const Nav = ({dotActive}) => {
+    const [isDisplayed, setIsDisplayed] = useState(false);
+
     function openGitHub(){
         window.open('https://github.com/YMirzaa', "_blank");
     };
+
+    const dot = <div id="nav-links-dot"> </div>;
 
     return (
       <nav>
@@ -30,24 +36,31 @@ const Nav = () => {
                     <Link to='/'>
                         <li>
                             <span className="nav-links">Home</span>
+                            {dotActive === 0 ? dot : null}
                         </li>
                     </Link>
             
                     <Link to='/women'>
                         <li>
                             <span className="nav-links">Women</span>
+                            {dotActive === 1 ? dot : null}
+
                         </li>
                     </Link>
             
                     <Link to='/men'>
                         <li>
                             <span className="nav-links">Men</span>
+                            {dotActive === 2 ? dot : null}
+
                         </li>
                     </Link>
 
                     <Link to='/about'>
                         <li>
                             <span className="nav-links">About</span>
+                            {dotActive === 3 ? dot : null}
+
                         </li>
                     </Link>  
                 </ul>
@@ -55,11 +68,15 @@ const Nav = () => {
             </div>
         </div>
         <div className="nav-right">
-            <img  src={cartIcon} alt="cart icon"/>
+            <img onClick={()=>setIsDisplayed(!isDisplayed)}  src={cartIcon} alt="cart icon"/>
             <img  src={searchIcon} alt="search icon"/>
         
         </div>
-        
+
+        <ShopCart 
+            isDisplayed={isDisplayed}
+            setIsDisplayed={setIsDisplayed}
+        />
         
       </nav>
     );

@@ -1,13 +1,11 @@
 import { useEffect } from 'react';
 
 
-function About() {
+function About({dotActive, setDotActive}) {
   useEffect(() => {
-    document.getElementsByClassName('nav-links')[3].classList.add('dot-active');
+    setDotActive(3);
 
-    return ()=>{
-      document.getElementsByClassName('nav-links')[3].classList.remove('dot-active');
-    }
+    
   },[]);
   
     return (

@@ -1,13 +1,10 @@
 import { useEffect } from 'react';
 
-function Men() {
-  useEffect(() => {
-    
-    document.getElementsByClassName('nav-links')[2].classList.add('dot-active');
+function Men({setDotActive}) {
 
-    return ()=>{
-      document.getElementsByClassName('nav-links')[2].classList.remove('dot-active');
-    }
+  useEffect(() => {
+    setDotActive(2);
+    
   },[]);
 
     return (
