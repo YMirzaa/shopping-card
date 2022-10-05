@@ -4,9 +4,9 @@ import closeIcon from '../assets/icons/close.png';
 function ShopCart({isDisplayed , setIsDisplayed}) {
 
     if(!isDisplayed){
-        return (<div></div>)
+        return <div></div>;
     }
-    
+
     return (
       <div id='shop-cart'>
             <div className='top'>
