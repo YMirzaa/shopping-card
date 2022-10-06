@@ -1,12 +1,8 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import '../styles/women.css';
-import { useEffect } from 'react';
 
-function Women({dotActive,setDotActive}) {
+function Women() {
   
-  useEffect(() => {
-    setDotActive(1);
-  },[]);
-
     return (
       <div id="women">
 

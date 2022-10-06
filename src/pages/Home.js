@@ -1,15 +1,10 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import '../styles/home.css';
-import { useEffect } from 'react';
 import { Link } from "react-router-dom";
 import homeVideo from '../assets/videos/z.mp4';
 
 function Home({ setDotActive}) {
 
-  useEffect(() => {
-    setDotActive(0);
-    
-
-  },[]);
 
     return (
       <div id='home'>
@@ -19,11 +14,11 @@ function Home({ setDotActive}) {
         </video>
 
 
-        <Link to='/women'>
+        <Link to='/women' onClick={()=>setDotActive(1)}>
             <button>Women</button>
         </Link>
       
-        <Link to='/men'>
+        <Link to='/men' onClick={()=>setDotActive(2)}>
             <button>Men</button>
         </Link>
       </div>

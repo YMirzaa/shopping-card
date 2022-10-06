@@ -1,11 +1,7 @@
-import { useEffect } from 'react';
+/* eslint-disable react-hooks/exhaustive-deps */
 
-function Men({setDotActive}) {
+function Men() {
 
-  useEffect(() => {
-    setDotActive(2);
-    
-  },[]);
 
     return (
       <div>

@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import { Link } from "react-router-dom";
 import '../styles/nav.css';
 
@@ -8,14 +8,13 @@ import gitIcon from '../assets/icons/github.png';
 import cartIcon from '../assets/icons/cart.png';
 import searchIcon from '../assets/icons/magnify.png';
 
-const Nav = ({dotActive}) => {
+const Nav = ({dotActive, setDotActive}) => {
     const [isDisplayed, setIsDisplayed] = useState(false);
 
     function openGitHub(){
         window.open('https://github.com/YMirzaa', "_blank");
     };
 
-    const dot = <div id="nav-links-dot"> </div>;
 
     return (
       <nav>
@@ -33,33 +32,35 @@ const Nav = ({dotActive}) => {
             </div>
             <div className="nav-pages">
                 <ul>
-                    <Link to='/'>
+                    <Link to='/' onClick={()=>setDotActive(0)} >
                         <li>
-                            <span className="nav-links">Home</span>
-                            {dotActive === 0 ? dot : null}
+                            <span  className="nav-links">Home</span>
+                            {dotActive === 0 && <div id="nav-links-dot"> </div>}
                         </li>
                     </Link>
             
-                    <Link to='/women'>
+                    <Link to='/women' onClick={()=>setDotActive(1)} >
                         <li>
-                            <span className="nav-links">Women</span>
-                            {dotActive === 1 ? dot : null}
+                            <span 
+                                
+                                className="nav-links">Women</span>
+                            {dotActive === 1 && <div id="nav-links-dot"> </div>}
 
                         </li>
                     </Link>
             
-                    <Link to='/men'>
+                    <Link to='/men' onClick={()=>setDotActive(2)}>
                         <li>
-                            <span className="nav-links">Men</span>
-                            {dotActive === 2 ? dot : null}
+                            <span  className="nav-links">Men</span>
+                            {dotActive === 2 && <div id="nav-links-dot"> </div>}
 
                         </li>
                     </Link>
 
-                    <Link to='/about'>
+                    <Link to='/about' onClick={()=>setDotActive(3)}>
                         <li>
-                            <span className="nav-links">About</span>
-                            {dotActive === 3 ? dot : null}
+                            <span  className="nav-links">About</span>
+                            {dotActive === 3 && <div id="nav-links-dot"> </div> }
 
                         </li>
                     </Link>  
@@ -72,7 +73,7 @@ const Nav = ({dotActive}) => {
             <img  src={searchIcon} alt="search icon"/>
         
         </div>
-
+        
         <ShopCart 
             isDisplayed={isDisplayed}
             setIsDisplayed={setIsDisplayed}

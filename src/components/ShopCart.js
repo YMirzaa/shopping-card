@@ -11,8 +11,10 @@ function ShopCart({isDisplayed , setIsDisplayed}) {
       <div id='shop-cart'>
             <div className='top'>
                 <div>
-                <img onClick={()=>setIsDisplayed(!isDisplayed)} src={closeIcon} alt="close icon" />
-
+                    <img 
+                        onClick={()=>setIsDisplayed(!isDisplayed)} 
+                        src={closeIcon} alt="close icon" 
+                    />
                 </div>
                 <div>
                     Subtotal = 0.00$
