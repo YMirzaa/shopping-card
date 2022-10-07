@@ -11,25 +11,29 @@
     border-radius: 5px;
     padding: 15px;
 
-    animation: display-shopcart 1s linear forwards ;
-    transform-origin: top center
+    /* animation: display-shopcart .4s linear forwards ;*/
+    transform-origin: 73% -9%; 
+    /* overflow: hidden;  */
 }
 
-@keyframes display-shopcart {
-    0% {
-        opacity: 0;
-        visibility: hidden;
-        transform: translateY(10px);
-    }
 
-    100% {
-        opacity: 1;
-
-        visibility: visible;
-        transform: translateY(0);
-    }
+.nav-animation-enter {
+  opacity: 0;
+  transform: scale(0.1);
 }
-
+.nav-animation-enter-active {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 400ms, transform 400ms;
+}
+.nav-animation-exit {
+  opacity: 1;
+}
+.nav-animation-exit-active {
+  opacity: 0;
+  transform: scale(0.1);
+  transition: opacity 400ms, transform 400ms;
+}
 #shop-cart > .top{
     height: 30px;
     display: flex;

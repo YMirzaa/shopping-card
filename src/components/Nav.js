@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, {useState} from "react";
 import { Link } from "react-router-dom";
 import '../styles/nav.css';
 
@@ -10,14 +10,16 @@ import searchIcon from '../assets/icons/magnify.png';
 
 const Nav = ({dotActive, setDotActive}) => {
     const [isDisplayed, setIsDisplayed] = useState(false);
+    
 
     function openGitHub(){
         window.open('https://github.com/YMirzaa', "_blank");
     };
 
-
     return (
-      <nav>
+      <nav style={ isDisplayed ? {
+        backgroundColor: 'black',
+      } : {}}>
         <div onClick={openGitHub} className="nav-left">
             
             <img  src={gitIcon} alt="gitHub icon"/>
