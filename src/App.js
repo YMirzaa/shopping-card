@@ -10,9 +10,17 @@ import Nav from './components/Nav';
 
 
 function App() {
+  const exampleProducts = [
+    {id: 0, name: 'siyah elbise', description: "lorem ipsum amk", price: 31, img: ''},
+    {id: 1, name: 'yesi elbise', description: "lorem ipsum again amk", price: 69, img: 
+    
+    
+    
+    ''}
+  ];
 
   const [dotActive, setDotActive] = useState(0);
-  
+  const [productObjs, setProductObjs] = useState(exampleProducts);
 
   return (
     <div id="app">

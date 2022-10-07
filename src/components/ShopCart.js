@@ -13,15 +13,15 @@ function ShopCart({isDisplayed , setIsDisplayed}) {
     // }
 
     return (
+        <CSSTransition 
+        nodeRef={nodeRef} 
+        in={isDisplayed} 
+        timeout={400} 
+        classNames="nav-animation"
+        unmountOnExit
+         >
         <div>
-            {console.log(isDisplayed)}
-            <CSSTransition 
-            nodeRef={nodeRef} 
-            in={isDisplayed} 
-            timeout={400} 
-            classNames="nav-animation"
-            unmountOnExit
-             >
+
                 <div ref={nodeRef} variant="primary" id='shop-cart'>
                     <div className='top'>
                         <div>
@@ -43,11 +43,9 @@ function ShopCart({isDisplayed , setIsDisplayed}) {
                         </button>
                     </div>
                 </div>
-            </CSSTransition>
 
         </div>
-        
-      
+        </CSSTransition>
     );
   }
   

@@ -44,7 +44,6 @@ const Nav = ({dotActive, setDotActive}) => {
                     <Link to='/women' onClick={()=>setDotActive(1)} >
                         <li>
                             <span 
-                                
                                 className="nav-links">Women</span>
                             {dotActive === 1 && <div id="nav-links-dot"> </div>}
 
@@ -71,15 +70,20 @@ const Nav = ({dotActive, setDotActive}) => {
             </div>
         </div>
         <div className="nav-right">
-            <img onClick={()=>setIsDisplayed(!isDisplayed)}  src={cartIcon} alt="cart icon"/>
+            <div></div>
+            <div></div>
+            <div>
+                <img onClick={()=>setIsDisplayed(!isDisplayed)}  src={cartIcon} alt="cart icon"/>
+                <ShopCart 
+                    isDisplayed={isDisplayed}
+                    setIsDisplayed={setIsDisplayed}
+                />
+            </div>
             <img  src={searchIcon} alt="search icon"/>
         
         </div>
         
-        <ShopCart 
-            isDisplayed={isDisplayed}
-            setIsDisplayed={setIsDisplayed}
-        />
+  
         
       </nav>
     );

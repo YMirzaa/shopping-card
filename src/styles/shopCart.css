@@ -1,7 +1,7 @@
 #shop-cart{
     position: fixed;
     top: 11%;
-    right: 8%;
+    right: 4%;
     color: black;
 
     background-color: white;
@@ -12,10 +12,9 @@
     padding: 15px;
 
     /* animation: display-shopcart .4s linear forwards ;*/
-    transform-origin: 73% -9%; 
+    transform-origin: 69% -9%; 
     /* overflow: hidden;  */
 }
-
 
 .nav-animation-enter {
   opacity: 0;
