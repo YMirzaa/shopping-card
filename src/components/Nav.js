@@ -10,8 +10,6 @@ import searchIcon from '../assets/icons/magnify.png';
 
 const Nav = ({dotActive, setDotActive}) => {
     const [isDisplayed, setIsDisplayed] = useState(false);
-    
-
     function openGitHub(){
         window.open('https://github.com/YMirzaa', "_blank");
     };
@@ -73,10 +71,15 @@ const Nav = ({dotActive, setDotActive}) => {
             <div></div>
             <div></div>
             <div>
-                <img onClick={()=>setIsDisplayed(!isDisplayed)}  src={cartIcon} alt="cart icon"/>
+                <img
+                    onClick={()=>{ setIsDisplayed(!isDisplayed)} }
+                    src={cartIcon} 
+                    alt="cart"                  
+                />
                 <ShopCart 
                     isDisplayed={isDisplayed}
                     setIsDisplayed={setIsDisplayed}
+
                 />
             </div>
             <img  src={searchIcon} alt="search icon"/>
