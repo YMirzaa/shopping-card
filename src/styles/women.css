@@ -49,7 +49,7 @@
 
 #women > .bottom > .grid {
     display: grid;
-    padding: 0 60px;
+    padding: 0 40px;
     justify-content: center;
     justify-items: center;
     gap: 40px;

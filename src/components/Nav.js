@@ -68,8 +68,6 @@ const Nav = ({dotActive, setDotActive}) => {
             </div>
         </div>
         <div className="nav-right">
-            <div></div>
-            <div></div>
             <div>
                 <img
                     onClick={()=>{ setIsDisplayed(!isDisplayed)} }
@@ -82,7 +80,10 @@ const Nav = ({dotActive, setDotActive}) => {
 
                 />
             </div>
-            <img  src={searchIcon} alt="search icon"/>
+            <div>
+                <img  src={searchIcon} alt="search icon"/>
+
+            </div>
         
         </div>
         
