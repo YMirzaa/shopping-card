@@ -1,10 +1,9 @@
 #home{
-    flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 20px;
-
+    height: 100vh;
     animation: 1s change-opacity-home 1 forwards normal;
 
 }

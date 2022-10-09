@@ -1,5 +1,85 @@
 #product{
-    height: 400px;
+    height: 440px;
     width: 280px;
-    border: 2px solid white;
+    position: relative; 
+    overflow: hidden;
 }
+
+#product > .card {
+    height: 90%;
+    width: 100%;
+    overflow: hidden;
+}
+#product > .card > img{
+    object-fit: cover;
+    transition: transform 700ms
+}
+
+#product:hover > .card img{
+    transform: scale(1.2);
+}
+
+#product >.card > img{
+    height: 100%;
+    width: 100%;
+}
+#product >.card > .product-info{
+    transition: opacity 700ms, transform 700ms;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    height: 40%;
+    width: 100%;
+    background-color: black;
+    color: white;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+
+#product:hover >.card > .product-info{
+    opacity: 0.9;
+    transform: translateY(-10px);
+}
+
+.product-info > div > div:first-child{
+    font-size: 1rem;
+    font-weight: bolder;
+    padding-bottom: 5px;
+}
+
+.product-info > div > div:nth-child(2){
+    font-size: .7rem;
+    font-weight: bold;
+}
+
+.product-info > div:nth-child(2){
+    font-size: .6rem;
+}
+
+.product-info > div{
+    font-size: .8rem;
+}
+
+.card-bottom {
+    color: white;
+    transition: transform 700ms, background-color 700ms;
+    background-color: black;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#product:hover >.card-bottom {
+    
+    color: black;
+    transform: translateY(-10px);
+    background-color: white;
+}
+

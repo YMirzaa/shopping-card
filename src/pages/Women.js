@@ -3,8 +3,7 @@ import Hero2 from "../assets/img/hero2.jpg"
 ;
 import Product from '../components/Product';
 
-function Women() {
-  let product = {id: 0, name: 'siyah elbise', description: "lorem ipsum amk", price: 31, img: ''};
+function Women({productList}) {
     return (
       <div id="women">
         
@@ -22,13 +21,13 @@ function Women() {
           </div>
 
           <div className='grid' >
-              <Product product={product}/>
-              <Product product={product}/>
-              <Product product={product}/>
-              <Product product={product}/>
-
-
-              <Product product={product}/>
+           
+           
+            {productList.filter((product)=>
+                product.gender === 'women')
+                .map((product)=>
+                  <Product product={product} />
+              )}
 
           </div>  
 

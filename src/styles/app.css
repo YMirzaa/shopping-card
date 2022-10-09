@@ -8,12 +8,11 @@
     src: url(../fonts/FuturaTS-Regular.ttf);
 }
 
+html {
+    background-color: black;
+}
+#app,
 body{
     margin: 0;
 }
 
-#app{
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
