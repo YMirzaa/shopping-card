@@ -5,12 +5,17 @@
     overflow: hidden;
 }
 
+#product:hover{
+    cursor: pointer;
+}
+
 #product > .card {
     height: 90%;
     width: 100%;
     overflow: hidden;
 }
 #product > .card > img{
+    opacity: .8;
     object-fit: cover;
     transition: transform 700ms
 }

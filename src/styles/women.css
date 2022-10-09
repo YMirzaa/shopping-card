@@ -3,11 +3,19 @@
     display: flex;
     flex-direction: column;
     z-index: -3;
-}
+    animation: 1s change-opacity-women 1 forwards normal ;
 
+}
+@keyframes change-opacity-women{
+    from{
+        opacity: 0;
+    }
+    to  {
+        opacity: .9;
+    }
+}
 #women > .bg-img{
     position: relative;
-    animation: 1s change-opacity-women 1 forwards normal ;
     z-index: -1;
 }
 #women > .bg-img > img{
@@ -18,14 +26,7 @@
 }
 
 
-@keyframes change-opacity-women{
-    from{
-        opacity: 0;
-    }
-    to  {
-        opacity: .9;
-    }
-}
+
 
 #women > .top{
     color: white;

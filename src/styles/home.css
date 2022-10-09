@@ -10,11 +10,11 @@
 
 @keyframes change-opacity-home{
     from{
-        background-color: rgba(0,0,0,1);
+        opacity: 0;
         
     }
     to{
-        background-color: rgba(0,0,0,0);
+        opacity: 1;
     }
 }
 

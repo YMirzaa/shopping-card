@@ -3,7 +3,7 @@ import Hero2 from "../assets/img/hero2.jpg"
 ;
 import Product from '../components/Product';
 
-function Women({productList}) {
+function Women({setDotActive, productList}) {
     return (
       <div id="women">
         
@@ -26,7 +26,7 @@ function Women({productList}) {
             {productList.filter((product)=>
                 product.gender === 'women')
                 .map((product)=>
-                  <Product product={product} />
+                  <Product key={product.key} product={product} setDotActive={setDotActive} />
               )}
 
           </div>  

@@ -1,0 +1,84 @@
+#item{
+    display: flex;
+    min-height: 100vh;
+    min-width: 100vw;
+    color: white;
+    transition: opacity 500ms;
+
+    animation: 1s change-opacity-home 1 forwards normal;
+
+}
+
+@keyframes change-opacity-home{
+    from{
+        opacity: 0;
+        
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+#item > .left{
+    position: relative; 
+    flex: .75;
+    
+}
+
+#item > .left > .black-bg-right{
+    position: absolute;
+    top: 0;
+    left: 75%;
+    width: 25%;
+    height: 100%;
+
+    background: linear-gradient(to right ,transparent, rgba(0, 0, 0, 1));
+
+}
+#item > .left > .black-bg-bottom{
+    position: absolute;
+    top: 75%;
+    left: 0;
+    width: 100%;
+    height: 25%;
+
+    background: linear-gradient(transparent, rgba(0, 0, 0, 1));
+
+}
+
+#item > .left> img{
+    z-index: -1;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    opacity: .8;
+}
+
+#item > .right{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    padding-bottom: 18%;
+}
+#item > .right > div{
+    padding-left: 10%;
+    padding-bottom: 1%;
+}
+#item > .right > div:first-child{
+    font-size: .7rem;
+}
+
+#item > .right > div:nth-child(2){
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+#item > .right > div:nth-child(3){
+    padding-bottom:4% ;
+}
+
+#item > .right > div:nth-child(4){
+    font-size: .9rem;
+}
