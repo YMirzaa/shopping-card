@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import { Link } from "react-router-dom";
 import '../styles/nav.css';
 
@@ -10,12 +10,32 @@ import searchIcon from '../assets/icons/magnify.png';
 
 const Nav = ({dotActive, setDotActive}) => {
     const [isDisplayed, setIsDisplayed] = useState(false);
+    const [isScrolled, setIsScrolled] = useState(false);
+
+
+
+    useEffect(() => {
+        window.addEventListener('scroll', changeNavBg);
+        return () => {
+        window.removeEventListener('scroll', changeNavBg);
+        }
+    }, [])
+    
+    const changeNavBg = () => {
+        // console.log(window.scrollY);
+        if (window.scrollY >= 50) {
+            setIsScrolled(true);
+        } else {
+            setIsScrolled(false);
+        }
+      }
+
     function openGitHub(){
         window.open('https://github.com/YMirzaa', "_blank");
     };
 
     return (
-      <nav style={ isDisplayed ? {
+      <nav style={ (isScrolled || isDisplayed)? {
         backgroundColor: 'black',
       } : {}}>
         <div onClick={openGitHub} className="nav-left">

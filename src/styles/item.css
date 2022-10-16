@@ -55,24 +55,37 @@
     opacity: .8;
 }
 
+
 #item > .right{
     flex: 1;
     display: flex;
     flex-direction: column;
     justify-content:center;
-    padding-bottom: 18%;
+    box-sizing: border-box;
 }
 #item > .right > div{
-    padding-left: 10%;
-    padding-bottom: 1%;
+
+    flex: 0;
+    padding: .3% 15%;
+    padding-right: 30%;
+
 }
+
+#item > .right > div:last-child{
+    padding-bottom: 5rem;
+}
+
 #item > .right > div:first-child{
     font-size: .7rem;
+    display: flex;
+    position: relative;
+
 }
 
 #item > .right > div:nth-child(2){
     font-size: 1.4rem;
     font-weight: bold;
+
 }
 
 #item > .right > div:nth-child(3){
@@ -81,4 +94,14 @@
 
 #item > .right > div:nth-child(4){
     font-size: .9rem;
+}
+
+#item > .right > div:first-child> div:nth-child(2){
+    position: absolute;
+    right: 25%;
+    top:-4rem;
+}
+
+#item > .right > div > div> img:hover{
+    cursor: pointer;    
 }

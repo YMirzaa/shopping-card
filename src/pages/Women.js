@@ -5,8 +5,7 @@ import Product from '../components/Product';
 
 function Women({setDotActive, productList}) {
     return (
-      <div id="women">
-        
+      <div id="women" >
         <div className='bg-img'>
             <img src={Hero2} alt="hero2 women" />
         </div>
@@ -14,7 +13,7 @@ function Women({setDotActive, productList}) {
           Women's
         </div>
 
-        <div className='bottom'>
+        <div className='bottom' >
 
           <div className='buttons'>
                 jgnkdfjndkfjgdkjfgk;s

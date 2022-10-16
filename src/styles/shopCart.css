@@ -11,16 +11,15 @@
     border-radius: 5px;
     padding: 15px;
 
-    transition: opacity 400ms, transform 400ms;
+    transition: opacity 400ms, visibility 400ms;
 
-    transform-origin: top center;
-    transform: scale(0.1);
+    visibility:hidden;
     opacity: 0;
     z-index: -1;
 }
 
 #shop-cart.animate{
-    transform: scale(1);
+    visibility:visible;
     opacity: 1;
 
 }

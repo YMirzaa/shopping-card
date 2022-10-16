@@ -1,9 +1,12 @@
-import { useParams, Link } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import '../styles/item.css';
+import closeIcon from '../assets/icons/close-item.png';
 
-function Item({setDotActive,products}) {
+function Item({ setDotActive, products }) {
+    const navigate = useNavigate();
     const { key } = useParams();
     const product = products.find(product => product.key === key );
+
     return (
       <div id='item'>
         <div className="left">
@@ -13,12 +16,21 @@ function Item({setDotActive,products}) {
             <img src={product.src} alt="product" />
         </div>
         <div className="right">
-            <div>{product.brand}</div>
             <div>
-                {product.title}
-                <Link to='/women' onClick={()=>setDotActive(1)}>
-                    <img src="" alt="go back" />
-                </Link>
+                <div>
+                  {product.brand}
+                </div> 
+                <div>
+                    <img 
+                      onClick={()=>{ 
+                          navigate(-1); 
+                          setDotActive(1);}} 
+                      src={closeIcon}
+                      alt="go back" />
+                </div>
+            </div>
+            <div>
+                  {product.title}
             </div>
             <div>{'$ '+  product.price}</div>
             <div>{product.description}</div>

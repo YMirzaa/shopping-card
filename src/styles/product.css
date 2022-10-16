@@ -86,5 +86,12 @@
     color: black;
     transform: translateY(-10px);
     background-color: white;
+    text-underline-offset: none;
+}
+a{
+    outline: none;
+    border: none;
+    text-decoration: none;
+    list-style: none;
 }
 
