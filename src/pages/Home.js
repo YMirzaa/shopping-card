@@ -1,7 +1,8 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import '../styles/home.css';
 import { Link } from "react-router-dom";
-import homeVideo from '../assets/videos/z.mp4';
+// import homeVideo from '../assets/videos/z.mp4';
+import homeVideo from 'https://denemebucketforshopping.s3.eu-central-1.amazonaws.com/z.mp4';
 
 function Home({ setDotActive}) {
 
