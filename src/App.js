@@ -12,18 +12,25 @@ import { productList } from "./components/ProductList";
 
 function App() {
   const [dotActive, setDotActive] = useState(0);
-  const [productObjs, setProductObjs] = useState(productList);
-
+  const [productsInCart, setProductsInCart] = useState(productList);
 
   return (
     <div id="app">
 
       <BrowserRouter>
-        <Nav dotActive={dotActive} setDotActive={setDotActive}/>
+        <Nav 
+                  productsInCart={productsInCart} 
+                  dotActive={dotActive} 
+                  setDotActive={setDotActive} 
+                  setProductsInCart={setProductsInCart}/>
         <Routes>
           <Route path="/" element={<Home  setDotActive={setDotActive} />}/>
-          <Route path="/women" element={<Women  setDotActive={setDotActive} productList={productObjs} />} />
-          <Route path="/women/item/:key" element={<Item setDotActive={setDotActive} products={productObjs} />} />
+          <Route path="/women" element={<Women  setDotActive={setDotActive} productList={productList} />} />
+          <Route path="/women/item/:key" element={<Item 
+                      productsInCart={productsInCart} 
+                      setProductsInCart={setProductsInCart} 
+                      setDotActive={setDotActive} 
+                      products={productList} />} />
           <Route path="/men" element={<Men productList={productList}/>} />
           <Route path="/about" element={<About />}/>
 

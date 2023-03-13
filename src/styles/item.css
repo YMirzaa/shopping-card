@@ -92,8 +92,17 @@
     padding-bottom:4% ;
 }
 
+
 #item > .right > div:nth-child(4){
     font-size: .9rem;
+    position: relative;
+
+}
+
+#item > .right .border-bottom{
+    border-bottom: 1px gray solid;
+    padding-top: 5%;
+    margin-bottom: 5%;
 }
 
 #item > .right > div:first-child> div:nth-child(2){
@@ -104,4 +113,39 @@
 
 #item > .right > div > div> img:hover{
     cursor: pointer;    
+}
+
+#item > .right  form {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+#item > .right button,
+#item > .right select{
+    height: auto;
+    width: 160px;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    border: 1px solid gray;
+    font-size: 1.1rem;
+
+}
+
+#item > .right select{
+    background: none;
+    color: white;
+    text-align: center;
+    outline: none;
+}
+
+#item > .right select:hover,
+#item > .right button:hover{
+    background-color: gray;
+}
+
+#item > .right option{
+    color: black;
+    background: black;
 }

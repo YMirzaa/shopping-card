@@ -28,6 +28,11 @@
     height: 30px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+}
+
+#shop-cart > .top > div:nth-child(2){
+    font-size: .8rem;
 }
 
 #shop-cart > .top img:hover{
@@ -45,7 +50,11 @@
     height: 250px;
     border-top: 1px black solid;
     border-bottom: 1px black solid;
-    overflow: scroll;   
+    overflow: scroll;  
+    display: flex;
+    flex-direction: column;
+    gap: 10px; 
+    overflow-y:scroll;
 }
 
 #shop-cart .bottom button{

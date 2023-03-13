@@ -1,7 +1,8 @@
 import '../styles/shopCart.css';
 import closeIcon from '../assets/icons/close.png';
+import ShopCartItem from './ShopCartItem';
 
-function ShopCart({isDisplayed , setIsDisplayed}) {
+function ShopCart({productsInCart, setProductsInCart, isDisplayed , setIsDisplayed}) {
     
 
     return (
@@ -16,11 +17,18 @@ function ShopCart({isDisplayed , setIsDisplayed}) {
                     />
                 </div>
                 <div>
-                    Subtotal = 0.00$
+                    Subtotal = ${(productsInCart.reduce(
+                        (prev, curr)=>{ return prev + Number(curr.price)}, 0)).toFixed(2)}
                 </div>
             </div>
             <div className='middle'>
-                cart curt content
+                {productsInCart.map( product => {
+                    return (<ShopCartItem 
+                                key={product.key} 
+                                product={product}
+                                quantity={1}
+                                size={'s'}/>)
+                })}
             </div>
             <div className='bottom'>
                 <button>

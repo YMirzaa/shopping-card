@@ -8,21 +8,20 @@ import gitIcon from '../assets/icons/github.png';
 import cartIcon from '../assets/icons/cart.png';
 import searchIcon from '../assets/icons/magnify.png';
 
-const Nav = ({dotActive, setDotActive}) => {
+const Nav = ({productsInCart, setProductsInCart , dotActive, setDotActive}) => {
     const [isDisplayed, setIsDisplayed] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
 
-
-
     useEffect(() => {
         window.addEventListener('scroll', changeNavBg);
+
         return () => {
-        window.removeEventListener('scroll', changeNavBg);
+            window.removeEventListener('scroll', changeNavBg);
         }
+        
     }, [])
     
     const changeNavBg = () => {
-        // console.log(window.scrollY);
         if (window.scrollY >= 50) {
             setIsScrolled(true);
         } else {
@@ -97,7 +96,8 @@ const Nav = ({dotActive, setDotActive}) => {
                 <ShopCart 
                     isDisplayed={isDisplayed}
                     setIsDisplayed={setIsDisplayed}
-
+                    productsInCart={productsInCart}
+                    setProductsInCart={setProductsInCart} 
                 />
             </div>
             <div>
