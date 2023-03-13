@@ -1,8 +1,17 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import '../styles/home.css';
 import { Link } from "react-router-dom";
+import axios from 'axios';
 // import homeVideo from '../assets/videos/z.mp4';
-import homeVideo from 'https://denemebucketforshopping.s3.eu-central-1.amazonaws.com/z.mp4';
+const homeVideo = ('https://denemebucketforshopping.s3.eu-central-1.amazonaws.com/z.mp4');
+// console.log(homeVideo);
+// axios.get(homeVideo)
+//   .then(response => {
+//     console.log(response);
+//   })
+//   .catch(error => {
+//     console.log(error);
+//   });
 
 function Home({ setDotActive}) {
 
